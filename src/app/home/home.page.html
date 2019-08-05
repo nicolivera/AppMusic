@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      My App Music
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-label color="primary">Presiona sobre la imagen para reproducir su canción</ion-label> 
+
+
+  <ion-grid>
+    <ion-row> <!--Las filas son componentes horizontales de la cuadrícula sistema y contienen un número variable de columnas. Aseguran que las columnas estén posicionadas correctamente.-->
+     <!--una columna es de 12 asi que al darle 6 el -->
+        
+                          <!-- *ngFor directiva de angular-->
+      <ion-col size="6" *ngFor="let banda of bandas" > <!--voy a interar sobre el array que hice-->
+        <ion-card (click)="reproducirSonido(banda)">
+         <ion-img [src]="banda.imagen"></ion-img>
+        </ion-card>    
+      </ion-col>
+    
+    </ion-row>
+
+  </ion-grid>
+
+  
+ 
+     
+<!-- <img src="assets/image/laRenga.jpg" alt=""> -->
+</ion-content>
